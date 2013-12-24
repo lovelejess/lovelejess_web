@@ -22,6 +22,8 @@ public class Application extends Controller {
     public static Result namaste() {
         return ok(namaste.render("namaste"));
     }
-
+    public static Result archivedEats(){
+        return ok(archivedEats.render("archivedEats"));
+    }
 
 }
