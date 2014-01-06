@@ -10,6 +10,9 @@ public class Application extends Controller {
     public static Result index() {
        	return ok(index.render("index"));
     }
+    public static Result author(){
+        return ok(index.render("author"));
+    }
     public static Result eat() {
         return ok(eat.render("eat"));
     }

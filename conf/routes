@@ -11,12 +11,11 @@ GET     /assets/*file               controllers.Assets.at(path="/public", file)
 
 
 # Dashboard pages
-GET		/index						controllers.Application.index()		
+GET		/index						controllers.Application.index()
+GET		/login						controllers.Application.author()		
 GET		/eat						controllers.Application.eat()
 GET		/playy						controllers.Application.playy()
 GET		/work						controllers.Application.work()
 GET		/namaste					controllers.Application.namaste()
 GET 	/archivedEats				controllers.Application.archivedEats()
-GET   	/archivedEats				controllers.EatController.allEats()
-GET		/archivedEats/:eatID		controllers.EatController.getEat(eatID)
-POST	/archivedEats				controllers.EatController.submitEat()
+

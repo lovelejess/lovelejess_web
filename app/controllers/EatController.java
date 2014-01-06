@@ -47,7 +47,7 @@ public class EatController {
     public static Result getEat(String eatId){
         Eat eat = new Model.Finder<String, Eat>(String.class, Eat.class).byId(eatId);
         if(eat == null){
-            return Results.notFound("No eat found with eatId " + eatId);
+            return Results.notFound("No archivedeats found with eatId " + eatId);
         }
         return Results.ok(Json.toJson(eat));
     }
