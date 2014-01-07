@@ -12,7 +12,7 @@ GET     /assets/*file               controllers.Assets.at(path="/public", file)
 
 # Dashboard pages
 GET		/index						controllers.Application.index()
-GET		/login						controllers.Application.author()		
+GET		/login						controllers.Application.login()		
 GET		/eat						controllers.Application.eat()
 GET		/playy						controllers.Application.playy()
 GET		/work						controllers.Application.work()
