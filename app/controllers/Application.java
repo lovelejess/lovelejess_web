@@ -2,7 +2,6 @@ package controllers;
 
 import play.*;
 import play.mvc.*;
-<<<<<<< HEAD
 import play.data.*;
 import static play.data.Form.*;
 
@@ -11,11 +10,6 @@ import views.html.*;
 
 public class Application extends Controller {
 
-    public static Result index() {
-       	return ok(index.render("index"));
-    }
-      // -- Authentication
-    
     public static class Login {
         
         public String email;
@@ -27,8 +21,14 @@ public class Application extends Controller {
             }
             return null;
         }
-        
+    }    
+
+    public static Result index() {
+       	return ok(index.render(""));
     }
+      // -- Authentication
+    
+
     /**
      * Login page.
      */
@@ -42,16 +42,16 @@ public class Application extends Controller {
      * Handle login form submission.
      */
     public static Result authenticate() {
-        Form<Login> loginForm = form(Login.class).bindFromRequest();
-        if(loginForm.hasErrors()) {
-            return badRequest(login.render(loginForm));
-        } else {
-            session("email", loginForm.get().email);
-            return redirect(
-                routes.Application.index()
-            );
-        }
+    Form<Login> loginForm = form(Login.class).bindFromRequest();
+    if (loginForm.hasErrors()) {
+        return badRequest(login.render(loginForm));
+    } else {
+        session("email", loginForm.get().email);
+        return redirect(
+            routes.Application.index()
+        );
     }
+}
 
     /**
      * Logout and clean the session.
@@ -62,7 +62,7 @@ public class Application extends Controller {
         return redirect(
             routes.Application.login()
         );
-
+    }
     public static Result eat() {
         return ok(eat.render("eat"));
     }
@@ -78,5 +78,5 @@ public class Application extends Controller {
     public static Result archivedEats(){
         return ok(archivedEats.render("archivedEats"));
     }
-
 }
+

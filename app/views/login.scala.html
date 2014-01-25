@@ -9,34 +9,28 @@
           <form class="form-signin" role="form">
             @helper.form(routes.Application.authenticate) {
             <h2 class="form-signin-heading">Please sign in</h2>
+              
               @if(form.hasGlobalErrors) { 
-                  <p class="error">
-                      @form.globalError.message
-                  </p>
+                  <div class="alert alert-warning">
+                      <p>@form.globalError.message</p>
+                      <h3> warning </h3>
+                  </div>
               }
               
               @if(flash.contains("success")) {
-                  <p class="success">
-                      @flash.get("success")
-                  </p>
+                  <div class="alert alert-sucess">
+                      <p>@flash.get("success")</p>
+                      <h3> success </h3>
+                  </div>
               }
               
-            <input type="text" class="form-control" placeholder="Email address" required autofocus>
-            <input type="password" class="form-control" placeholder="Password" required>
+            <input type="email" name="email" class="form-control" placeholder="Email address" required autofocus value="@form("email").value">
+            <input type="password" name="password" class="form-control" placeholder="Password" required>
             <label class="checkbox">
             <input type="checkbox" value="remember-me"> Remember me
             </label>
             <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
           }
-        </form>
-        <form class="form-signin" role="form">
-          <h2 class="form-signin-heading">Please sign in</h2>
-          <input type="text" class="form-control" placeholder="Email address" required autofocus>
-          <input type="password" class="form-control" placeholder="Password" required>
-          <label class="checkbox">
-          <input type="checkbox" value="remember-me"> Remember me
-          </label>
-          <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
         </form>
         </div>
       </div>

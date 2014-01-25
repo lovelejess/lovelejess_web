@@ -15,7 +15,7 @@ public class LoginTest extends WithApplication {
     @Before
     public void setUp() {
         start(fakeApplication(inMemoryDatabase(), fakeGlobal()));
-        Ebean.save((List) Yaml.load("test-data.yml"));
+        Ebean.save((List) Yaml.load("initial-data.yml"));
     }
 
     @Test

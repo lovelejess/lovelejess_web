@@ -10,7 +10,10 @@ import models.*;
 public class Global extends GlobalSettings {
     
     public void onStart(Application app) {
-        InitialData.insert(app);
+        // Check if the database is empty
+        if (User.find.findRowCount() == 0) {
+            Ebean.save((List) Yaml.load("initial-data.yml"));
+        }
     }
     
     static class InitialData {

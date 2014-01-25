@@ -14,7 +14,6 @@ create table eat (
   constraint pk_eat primary key (id))
 ;
 
-<<<<<<< HEAD
 create table account (
   email                     varchar(255) not null,
   name                      varchar(255),
@@ -25,6 +24,8 @@ create table account (
 create sequence eat_seq;
 
 create sequence account_seq;
+
+
 
 
 # --- !Downs
@@ -40,3 +41,4 @@ SET REFERENTIAL_INTEGRITY TRUE;
 drop sequence if exists eat_seq;
 
 drop sequence if exists account_seq;
+
