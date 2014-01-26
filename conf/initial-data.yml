@@ -4,8 +4,8 @@
 users:
 
     - !!models.User
-        email:      guillaume@sample.com
-        name:       Guillaume Bort
+        email:      lovelejess@sample.com
+        name:       Jessica Le
         password:   secret
     
     - !!models.User

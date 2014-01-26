@@ -26,6 +26,7 @@ public class Application extends Controller {
      * Login page.
      */
     public static Result login() {
+        System.out.println("login page");
         return ok(
             login.render(form(Login.class))
         );
@@ -40,14 +41,17 @@ public class Application extends Controller {
      * Handle login form submission.
      */
     public static Result authenticate() {
+        System.out.println("authenticate");
     Form<Login> loginForm = form(Login.class).bindFromRequest();
     if (loginForm.hasErrors()) {
+        System.out.println("has bad errors"); 
         return badRequest(login.render(loginForm));
     } else {
         session("email", loginForm.get().email);
+        System.out.println("redirecting");
         return redirect(
-            //routes.Application.index()
-            "http://www.npr.org/"
+            routes.Application.index()
+            //"http://www.npr.org/"
         );
         }
     }
