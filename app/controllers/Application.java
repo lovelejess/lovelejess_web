@@ -22,13 +22,6 @@ public class Application extends Controller {
             return null;
         }
     }    
-
-    public static Result index() {
-       	return ok(index.render(""));
-    }
-      // -- Authentication
-    
-
     /**
      * Login page.
      */
@@ -37,6 +30,11 @@ public class Application extends Controller {
             login.render(form(Login.class))
         );
     }
+
+    public static Result index() {
+       	return ok(index.render(""));
+    }
+      // -- Authentication
     
     /**
      * Handle login form submission.
@@ -48,10 +46,11 @@ public class Application extends Controller {
     } else {
         session("email", loginForm.get().email);
         return redirect(
-            routes.Application.index()
+            //routes.Application.index()
+            "http://www.npr.org/"
         );
+        }
     }
-}
 
     /**
      * Logout and clean the session.

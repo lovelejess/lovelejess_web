@@ -6,6 +6,7 @@ import javax.persistence.*;
 import play.db.ebean.*;
 import play.data.format.*;
 import play.data.validation.*;
+import com.avaje.ebean.*;
 
 /**
  * User entity managed by Ebean
@@ -29,7 +30,8 @@ public class User extends Model {
     
     // -- Queries
     
-    public static Model.Finder<String,User> find = new Model.Finder<String,User>(String.class, User.class);
+    public static Model.Finder<String,User> find = new Model.Finder<String,User>(
+        String.class, User.class);
     
     /**
      * Retrieve all users.
@@ -56,7 +58,6 @@ public class User extends Model {
     }
     
     // --
-    
     public String toString() {
         return "User(" + email + ")";
     }
