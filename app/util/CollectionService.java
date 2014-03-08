@@ -25,4 +25,14 @@ public class CollectionService<T> {
             return null;
         }
     }
+
+    public JacksonDBCollection getCollection(String collection,Class clazz){
+        try{
+            return JacksonDBCollection.wrap(getDB().getCollection(collection),clazz);
+        
+        } catch (Exception e){
+            e.printStackTrace();
+            return null;
+        }
+    }
 }
