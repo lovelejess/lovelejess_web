@@ -1,1 +1,1 @@
-web: target/universal/stage/bin/lovelejess -Dhttp.port=$PORT -Dmongodb.uri=$MONGOLAB_URL
+web: target/universal/stage/bin/lovelejess -Dhttp.port=$PORT -Dmongodb.uri=$MONGOLAB_URI
