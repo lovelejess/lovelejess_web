@@ -7,6 +7,9 @@ import org.mongojack.JacksonDBCollection;
 
 import java.net.UnknownHostException;
 
+
+import views.html.*;
+import play.mvc.*;
 public class CollectionService<T> {
 
     public DB getDB() {
