@@ -25,8 +25,9 @@ import org.mongojack.JacksonDBCollection;
 import com.mongodb.MongoClient;
 import java.net.UnknownHostException;
 import java.io.IOException;
+import play.libs.Json;
 
-public class Namaste{
+public class Namaste extends Context{
 
 	public static JacksonDBCollection<models.Namaste,String> namasteDB;
 	public static Result displayPhotos(){
@@ -52,6 +53,6 @@ public class Namaste{
 			e.printStackTrace();
 		}
 
-		return null;
+		 return ok(Json.toJson(getCollection("namaste", models.Namaste.class).find().toArray()));
 	}
 }
