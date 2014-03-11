@@ -40,6 +40,8 @@ public class Application extends Controller {
     public static Result archivedEats(){
         return ok(archivedEats.render("archivedEats"));
     }
-
+    public static Result contact(){
+        return ok(contact.render("Contact"));
+    }
 }
 
