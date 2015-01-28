@@ -12,16 +12,6 @@ GET     /assets/*file               controllers.Assets.at(path="/public", file)
 
 # Dashboard pages
 GET		/index						controllers.Application.index()
-
-# Authentication
-#GET		/login						controllers.Application.login()
-#POST	/login						controllers.Application.authenticate()
-#GET		/logout						controllers.Application.logout()
-
-GET		/eat						controllers.Application.eat()
-GET		/playy						controllers.Application.playy()
 GET		/work						controllers.Application.work()
 GET		/portfolio					controllers.Application.portfolio()
-GET		/namaste					controllers.Application.namaste()
-GET 	/archivedEats				controllers.Application.archivedEats()
 GET		/about						controllers.Application.about()

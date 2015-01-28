@@ -25,23 +25,11 @@ public class Application extends Controller {
     public static Result index() {
        	return ok(index.render(""));
     }
-    public static Result eat() {
-        return ok(eat.render("eat"));
-    }
-    public static Result playy() {
-        return ok(playy.render("play"));
-    }
     public static Result work() {
        return ok(work.render("work"));
     }
     public static Result portfolio(){
         return ok(portfolio.render("portfolio"));
-    }
-    public static Result namaste() {
-        return ok(namaste.render("namaste"));
-    }
-    public static Result archivedEats(){
-        return ok(archivedEats.render("archivedEats"));
     }
     public static Result about(){
         return ok(about.render("about"));
