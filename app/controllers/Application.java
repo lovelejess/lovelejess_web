@@ -25,9 +25,6 @@ public class Application extends Controller {
     public static Result index() {
        	return ok(index.render(""));
     }
-    public static Result work() {
-       return ok(work.render("work"));
-    }
     public static Result portfolio(){
         return ok(portfolio.render("portfolio"));
     }

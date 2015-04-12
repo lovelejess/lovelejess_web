@@ -12,6 +12,5 @@ GET     /assets/*file               controllers.Assets.at(path="/public", file)
 
 # Dashboard pages
 GET		/index						controllers.Application.index()
-GET		/work						controllers.Application.work()
 GET		/portfolio					controllers.Application.portfolio()
 GET		/about						controllers.Application.about()
