@@ -23,3 +23,6 @@ test:
 production:
   <<: *default
   database: production_db
+  pool: 5
+  username: tednxbtkuguial
+  password: 
