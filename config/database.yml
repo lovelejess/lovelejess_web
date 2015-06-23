@@ -8,9 +8,13 @@ default: &default
   adapter: postgresql
   pool: 5
   timeout: 5000
+  encoding: unicode
+  username: lovelejess
+  password: 
 
 development:
   <<: *default
+  host: localhost
   database: development_db
 
 # Warning: The database defined as "test" will be erased and
@@ -23,6 +27,3 @@ test:
 production:
   <<: *default
   database: production_db
-  pool: 5
-  username: tednxbtkuguial
-  password: 
