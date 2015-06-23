@@ -1,0 +1,35 @@
+package controllers;
+
+import play.*;
+import play.mvc.*;
+import play.data.*;
+import static play.data.Form.*;
+
+import models.*;
+import views.html.*;
+
+
+import java.util.LinkedList;
+import java.util.List;
+
+import com.mongodb.DB;
+import com.mongodb.DBCollection;
+import com.mongodb.DBCursor;
+import com.mongodb.Mongo;
+import com.mongodb.MongoException;
+import com.mongodb.gridfs.GridFS;
+import com.mongodb.gridfs.GridFSDBFile;
+import com.mongodb.gridfs.GridFSInputFile;
+
+public class Application extends Controller {
+    public static Result index() {
+       	return ok(index.render(""));
+    }
+    public static Result portfolio(){
+        return ok(portfolio.render("portfolio"));
+    }
+    public static Result about(){
+        return ok(about.render("about"));
+    }
+}
+
