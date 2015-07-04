@@ -2,13 +2,39 @@
 <html>
 <head>
   <title>LovelejessV2</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+  <link rel="stylesheet" href="assets/css/main.css" />
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/skel-viewport.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+	<script src="assets/js/main.js"></script>
 </head>
 <body>
-
-<%= yield %>
-
+	<!-- Wrapper-->
+	<div id="wrapper">
+		<!-- Nav -->
+		<nav id="nav">
+			<a href="#me" class="icon fa-home active"><span>Home</span></a>
+			<a href="#about" class="icon fa fa-user"><span>About</span></a>
+			<a href="#work" class="icon fa-folder"><span>Work</span></a>
+			<a href="https://github.com/lovelejess" class="icon fa fa-github-square"><span>Github</span></a>
+			<a href="https://www.linkedin.com/in/lejessica" class="icon fa fa-linkedin-square"><span>LinkedIn</span></a>
+		</nav>
+		<!-- Main -->
+		<div id="main">
+			<%= yield %>
+		</div>
+		<!-- Footer -->
+		<div id="footer">
+			<ul class="copyright">
+				<li>&copy; LoveLeJess 2015.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+			</ul>
+		</div>
+	</div>
 </body>
 </html>
