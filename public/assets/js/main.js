@@ -55,9 +55,10 @@
 					$form = $('form'),
 					panels = [],
 					activePanelId = null,
-					firstPanelId = null,
+					previousPanelId = null,
 					isLocked = false,
-					hash = window.location.hash.substring(1);
+					hash = window.location.pathname.substring(0,1);
+					console.log(hash);
 
 				if (skel.vars.touch) {
 
@@ -79,107 +80,22 @@
 						if (skel.vars.touch && (window.orientation == 0 || window.orientation == 180))
 							$wrapper.css('padding-top', Math.max((($window.height() - (panels[activePanelId].outerHeight() + $footer.outerHeight())) / 2) - $nav.height(), 30) + 'px');
 						else
-							$wrapper.css('padding-top', ((($window.height() - panels[firstPanelId].height()) / 2) - $nav.height()) + 'px');
+							$wrapper.css('padding-top', ((($window.height() - panels[previousPanelId].height()) / 2) - $nav.height())- 50 + 'px');
 					};
 
 				// Panels.
 					$panels.each(function(i) {
 						var t = $(this), id = t.attr('id');
+						console.log(id);
 
 						panels[id] = t;
 
-						if (i == 0) {
+						activePanelId = id;
+						previousPanelId = id;
 
-							firstPanelId = id;
-							activePanelId = id;
-
-						}
-						else
-							t.hide();
-
-						t._activate = function(instant) {
-
-							// Check lock state and determine whether we're already at the target.
-								if (isLocked
-								||	activePanelId == id)
-									return false;
-
-							// Lock.
-								isLocked = true;
-
-							// Change nav link (if it exists).
-								$nav_links.removeClass('active');
-								$nav_links.filter('[href="#' + id + '"]').addClass('active');
-
-							// Change hash.
-								if (i == 0)
-									window.location.hash = '#';
-								else
-									window.location.hash = '#' + id;
-
-							// Add bottom padding.
-								var x = parseInt($wrapper.css('padding-top')) +
-										panels[id].outerHeight() +
-										$nav.outerHeight() +
-										$footer.outerHeight();
-
-								if (x > $window.height())
-									$wrapper.addClass('tall');
-								else
-									$wrapper.removeClass('tall');
-
-							// Fade out active panel.
-								$footer.fadeTo(settings.fadeSpeed, 0.0001);
-								panels[activePanelId].fadeOut(instant ? 0 : settings.fadeSpeed, function() {
-
-									// Set new active.
-										activePanelId = id;
-
-										// Force scroll to top.
-											$hbw.animate({
-												scrollTop: 0
-											}, settings.resizeSpeed, 'swing');
-
-										// Reposition.
-											$body._reposition();
-
-										// Resize main to height of new panel.
-											$main.animate({
-												height: panels[activePanelId].outerHeight()
-											}, instant ? 0 : settings.resizeSpeed, 'swing', function() {
-
-												// Fade in new active panel.
-													$footer.fadeTo(instant ? 0 : settings.fadeSpeed, 1.0);
-													panels[activePanelId].fadeIn(instant ? 0 : settings.fadeSpeed, function() {
-
-														// Unlock.
-															isLocked = false;
-
-													});
-											});
-
-								});
-
-						};
-
-					});
-
-				// Nav + Jumplinks.
-					$nav_links.add($jumplinks).click(function(e) {
-						var t = $(this), href = t.attr('href'), id;
-
-						if (href.substring(0,1) == '#') {
-
-							e.preventDefault();
-							e.stopPropagation();
-
-							id = href.substring(1);
-
-							if (id in panels)
-								panels[id]._activate();
-
-						}
-
+						$nav_links.removeClass('active');
+						$nav_links.filter('[href="/' + id + '"]').addClass('active');
+						console.log($nav_links.filter('[href="/' + id + '"]').addClass('active'));
 					});
 
 				// Window.

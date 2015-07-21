@@ -1,0 +1,109 @@
+Searching 151 files for "wrapper"
+
+/Users/jessicale/Repositories/lovelejess_web/app/views/layouts/application.html.erb:
+   15  </head>
+   16  <body>
+   17: 	<!-- Wrapper-->
+   18: 	<div id="wrapper">
+   19  		<!-- Nav -->
+   20  		<nav id="nav">
+
+/Users/jessicale/Repositories/lovelejess_web/config/initializers/wrap_parameters.rb:
+    1  # Be sure to restart your server when you modify this file.
+    2  
+    3: # This file contains settings for ActionController::ParamsWrapper which
+    4  # is enabled by default.
+    5  
+
+/Users/jessicale/Repositories/lovelejess_web/public/assets/css/main.css:
+ 1221  				}
+ 1222  
+ 1223: 		/* Wrapper */
+ 1224  
+ 1225: 			#wrapper {
+ 1226  				width: 45em;
+ 1227  				margin: 0 auto;
+ ....
+ 1229  			}
+ 1230  
+ 1231: 				#wrapper.tall {
+ 1232  					padding-bottom: 6em;
+ 1233  				}
+ ....
+ 1487  			}
+ 1488  
+ 1489: 		/* Wrapper */
+ 1490  
+ 1491: 			#wrapper {
+ 1492  				padding: 7px;
+ 1493  			}
+
+/Users/jessicale/Repositories/lovelejess_web/public/assets/css/noscript.css:
+    5  */
+    6  
+    7: /* Wrapper */
+    8  
+    9: 	#wrapper {
+   10  		opacity: 1.0;
+   11  	}
+
+/Users/jessicale/Repositories/lovelejess_web/public/assets/js/ie/backgroundsize.min.htc:
+    4  <attach event="onresize" for="window" onevent="handleResize()" />
+    5  <script type="text/javascript">
+    6: var rsrc=/url\(["']?(.*?)["']?\)/,positions={top:0,left:0,bottom:1,right:1,center:0.5},doc=element.document;init(); function init(){var b=doc.createElement("div"),a=doc.createElement("img"),c,d;b.style.position="absolute";b.style.zIndex=-1;b.style.top=0;b.style.right=0;b.style.left=0;b.style.bottom=0;b.style.overflow="hidden";a.style.position="absolute";a.style.width=a.style.width="auto";b.appendChild(a);element.insertBefore(b,element.firstChild);d=[element.currentStyle.backgroundPositionX,element.currentStyle.backgroundPositionY];element.bgsExpando=c={wrapper:b,img:a,backgroundSize:element.currentStyle["background-size"], backgroundPositionX:positions[d[0]]||parseFloat(d[0])/100,backgroundPositionY:positions[d[1]]||parseFloat(d[1])/100};"auto"==element.currentStyle.zIndex&&(element.style.zIndex=0);"static"==element.currentStyle.position&&(element.style.position="relative");refreshDisplay(element,c)&&(refreshDimensions(element,c),refreshBackgroundImage(element,c,function(){updateBackground(element,c)}))} function refreshDisplay(b,a){var c=b.currentStyle.display;c!=a.display&&(a.display=c,a.somethingChanged=!0);return"none"!=c}function refreshDimensions(b,a){var c=b.offsetWidth-(parseFloat(b.currentStyle.borderLeftWidth)||0)-(parseFloat(b.currentStyle.borderRightWidth)||0),d=b.offsetHeight-(parseFloat(b.currentStyle.borderTopWidth)||0)-(parseFloat(b.currentStyle.borderBottomWidth)||0);if(c!=a.innerWidth||d!=a.innerHeight)a.innerWidth=c,a.innerHeight=d,a.somethingChanged=!0} function refreshBackgroundImage(b,a,c){var d=a.img,e=(rsrc.exec(b.currentStyle.backgroundImage)||[])[1];if(e&&e!=a.backgroundSrc){a.backgroundSrc=e;a.somethingChanged=!0;d.onload=function(){var b=d.width,e=d.height;1==b&&1==e||(a.imgWidth=b,a.imgHeight=e,a.constrain=!1,c(),d.style.visibility="visible",d.onload=null)};d.style.visibility="hidden";d.src=a.backgroundSrc;if(d.readyState||d.complete)d.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",d.src=a.backgroundSrc;a.ignoreNextPropertyChange= !0;b.style.backgroundImage="none"}else c()} function updateBackground(b,a){if(a.somethingChanged){var c=a.img,d=a.innerWidth/a.innerHeight,e=a.imgWidth/a.imgHeight,f=a.constrain;"contain"==a.backgroundSize?e>d?(a.constrain=d="width",e=Math.floor((a.innerHeight-a.innerWidth/e)*a.backgroundPositionY),c.style.top=e+"px",d!=f&&(c.style.width="100%",c.style.height="auto",c.style.left=0)):(a.constrain=d="height",e=Math.floor((a.innerWidth-a.innerHeight*e)*a.backgroundPositionX),c.style.left=e+"px",d!=f&&(c.style.width="auto",c.style.height="100%", c.style.top=0)):"cover"==a.backgroundSize&&(e>d?(a.constrain=d="height",e=Math.floor((a.innerHeight*e-a.innerWidth)*a.backgroundPositionX),c.style.left=-e+"px",d!=f&&(c.style.width="auto",c.style.height="100%",c.style.top=0)):(a.constrain=d="width",e=Math.floor((a.innerWidth/e-a.innerHeight)*a.backgroundPositionY),c.style.top=-e+"px",d!=f&&(c.style.width="100%",c.style.height="auto",c.style.left=0)));a.somethingChanged=!1}} function handlePropertychange(){var b=element.bgsExpando;b.ignoreNextPropertyChange?b.ignoreNextPropertyChange=!1:refreshDisplay(element,b)&&(refreshDimensions(element,b),refreshBackgroundImage(element,b,function(){updateBackground(element,b)}))}function handleResize(){var b=element.bgsExpando;"none"!=b.display&&(refreshDimensions(element,b),updateBackground(element,b))} function restore(){var b=element.bgsExpando;try{element.style.backgroundImage="url('"+b.backgroundSrc+"')",element.removeChild(b.wrapper),element.bgsExpando=null}catch(a){}};
+    7  </script>
+
+/Users/jessicale/Repositories/lovelejess_web/public/assets/js/main.js:
+   50  					$hbw = $('html,body,window'),
+   51  					$footer = $('#footer'),
+   52: 					$wrapper = $('#wrapper'),
+   53  					$nav = $('#nav'), $nav_links = $nav.find('a'),
+   54  					$jumplinks = $('.jumplink'),
+   ..
+   79  					$body._reposition = function() {
+   80  						if (skel.vars.touch && (window.orientation == 0 || window.orientation == 180))
+   81: 							$wrapper.css('padding-top', Math.max((($window.height() - (panels[activePanelId].outerHeight() + $footer.outerHeight())) / 2) - $nav.height(), 30) + 'px');
+   82  						else
+   83: 							$wrapper.css('padding-top', ((($window.height() - panels[previousPanelId].height()) / 2) - $nav.height()) + 'px');
+   84  					};
+   85  
+   ..
+  119  						$window
+  120  							.on('resize', function() {
+  121: 								$wrapper.css('min-height', $window.height());
+  122  							});
+  123  
+  ...
+  144  						panels[hash]._activate(true);
+  145  
+  146: 					$wrapper.fadeTo(400, 1.0);
+  147  
+  148  			})
+
+/Users/jessicale/Repositories/lovelejess_web/public/assets/sass/main.scss:
+  485  			}
+  486  
+  487: 		/* Wrapper */
+  488  
+  489: 			#wrapper {
+  490  				width: 45em;
+  491  				margin: 0 auto;
+  ...
+  751  			}
+  752  
+  753: 		/* Wrapper */
+  754  
+  755: 			#wrapper {
+  756  				padding: 7px;
+  757  			}
+
+/Users/jessicale/Repositories/lovelejess_web/public/assets/sass/noscript.scss:
+   10  */
+   11  
+   12: /* Wrapper */
+   13  
+   14: 	#wrapper {
+   15  		opacity: 1.0;
+   16  	}
+
+24 matches across 8 files

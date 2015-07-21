@@ -814,85 +814,6 @@
 		margin-bottom: 2em;
 	}
 
-/* Table */
-
-	table {
-		width: 100%;
-	}
-
-		table.default tbody tr {
-			border-bottom: solid 1px #f4f4f4;
-		}
-
-		table.default td {
-			padding: 0.5em 1em 0.5em 1em;
-		}
-
-		table.default th {
-			text-align: left;
-			font-weight: 400;
-			padding: 0.5em 1em 0.5em 1em;
-		}
-
-		table.default thead {
-			border-bottom: solid 2px #f4f4f4;
-		}
-
-/* Form */
-
-	form label {
-		display: block;
-		font-weight: 400;
-		color: #363636;
-		margin: 0 0 1em 0;
-	}
-
-	form input[type="text"],
-	form input[type="email"],
-	form input[type="password"],
-	form select,
-	form textarea {
-		-webkit-appearance: none;
-		border: 0;
-		background: #f4f4f4;
-		padding: 0.75em;
-		width: 100%;
-		-moz-transition: background-color .25s ease-in-out;
-		-webkit-transition: background-color .25s ease-in-out;
-		-ms-transition: background-color .25s ease-in-out;
-		transition: background-color .25s ease-in-out;
-	}
-
-		form input[type="text"]:focus,
-		form input[type="email"]:focus,
-		form input[type="password"]:focus,
-		form select:focus,
-		form textarea:focus {
-			background: #f8f8f8;
-		}
-
-	form input[type="text"],
-	form input[type="email"],
-	form input[type="password"],
-	form select {
-		line-height: 1.35em;
-	}
-
-	form ::-webkit-input-placeholder {
-		color: #999;
-	}
-
-	form :-moz-placeholder {
-		color: #999;
-	}
-
-	form ::-moz-placeholder {
-		color: #999;
-	}
-
-	form :-ms-input-placeholder {
-		color: #999;
-	}
 
 /* Section/Article */
 
@@ -943,66 +864,6 @@
 			.image.centered img {
 				margin: 0 auto;
 				width: auto;
-			}
-
-/* Button */
-
-	input[type="button"],
-	input[type="submit"],
-	input[type="reset"],
-	button,
-	.button {
-		-webkit-appearance: none;
-		display: inline-block;
-		background-color: #222222;
-		color: #ffffff;
-		border: 0;
-		cursor: pointer;
-		outline: 0;
-		-moz-transition: background-color .25s ease-in-out;
-		-webkit-transition: background-color .25s ease-in-out;
-		-ms-transition: background-color .25s ease-in-out;
-		transition: background-color .25s ease-in-out;
-	}
-
-		input[type="button"]:hover,
-		input[type="submit"]:hover,
-		input[type="reset"]:hover,
-		button:hover,
-		.button:hover {
-			background-color: #333333;
-		}
-
-		input[type="button"]:active,
-		input[type="submit"]:active,
-		input[type="reset"]:active,
-		button:active,
-		.button:active {
-			background-color: #444444;
-		}
-
-		input[type="button"].alt,
-		input[type="submit"].alt,
-		input[type="reset"].alt,
-		button.alt,
-		.button.alt {
-			background-color: #777777;
-		}
-
-			input[type="button"].alt:hover,
-			input[type="submit"].alt:hover,
-			input[type="reset"].alt:hover,
-			button.alt:hover,
-			.button.alt:hover {
-				background-color: #888888;
-			}
-
-			input[type="button"].alt:active,
-			input[type="submit"].alt:active,
-			input[type="reset"].alt:active,
-			button.alt:active,
-			.button.alt:active {
-				background-color: #999999;
 			}
 
 /* List */
@@ -1126,7 +987,7 @@
 				display: inline;
 				content: '\2022';
 				opacity: 0.5;
-				padding: 0 0.75em 0 0.75em;
+				padding: 0 0.75em 0 1.75em;
 			}
 
 			#footer .copyright li:first-child:before {
@@ -1182,42 +1043,6 @@
 
 				header > p {
 					margin: 0.5em 0 0 0;
-				}
-
-		/* Button */
-
-			input[type="button"],
-			input[type="submit"],
-			input[type="reset"],
-			button,
-			.button {
-				padding: 0.7em 1.5em 0.7em 1.5em;
-			}
-
-				input[type="button"].small,
-				input[type="submit"].small,
-				input[type="reset"].small,
-				button.small,
-				.button.small {
-					font-size: 0.75em;
-				}
-
-				input[type="button"].big,
-				input[type="submit"].big,
-				input[type="reset"].big,
-				button.big,
-				.button.big {
-					font-size: 1.25em;
-					padding: 0.5em 1.25em 0.5em 1.25em;
-				}
-
-				input[type="button"].huge,
-				input[type="submit"].huge,
-				input[type="reset"].huge,
-				button.huge,
-				.button.huge {
-					font-size: 1.5em;
-					padding: 0.5em 1.25em 0.5em 1.25em;
 				}
 
 		/* Wrapper */
@@ -1332,20 +1157,17 @@
 				top: 0;
 				left: 0;
 				width: 45em;
-			}
-
-		/* Me */
-
-			#me {
-				padding: 0;
 				height: 20em;
 			}
+
+
+		/* Me */
 
 				#me .pic {
 					display: block;
 					position: absolute;
-					right: -1px;
-					top: 0;
+					right: -1em;
+					top: 0em;
 					height: 100%;
 					text-decoration: none;
 				}
@@ -1428,7 +1250,7 @@
 
 	}
 
-/* Mobile */
+/******** Mobile ********/
 
 	@media screen and (max-width: 736px) {
 
@@ -1458,36 +1280,6 @@
 				header > p {
 					margin: 0.5em 0 0 0;
 				}
-
-		/* Table */
-
-			table.style1 {
-				overflow-x: scroll;
-			}
-
-		/* List */
-
-			ul.actions li {
-				display: block;
-				margin: 0.5em 0 0 0;
-			}
-
-				ul.actions li:first-child {
-					margin-top: 0;
-				}
-
-		/* Button */
-
-			input[type="button"],
-			input[type="submit"],
-			input[type="reset"],
-			button,
-			.button {
-				display: block;
-				width: 100%;
-				padding: 0.75em 0 0.75em 0;
-				text-align: center;
-			}
 
 		/* Wrapper */
 
